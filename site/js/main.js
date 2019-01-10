@@ -4,7 +4,8 @@ function newStory() {
         "little boy",
         "reindeer",
         "apple",
-        "elf"
+        "elf",
+        "turkey",
     ]
     
     var personalPronoun = [
@@ -13,6 +14,7 @@ function newStory() {
         "it",
         "it",
         "he",
+        "it",
     ]
     
     var possessivePronoun = [
@@ -21,6 +23,7 @@ function newStory() {
         "its",
         "its",
         "his",
+        "its",
     ]
 
     var objectivePronoun = [
@@ -29,31 +32,34 @@ function newStory() {
         "it",
         "it",
         "him",
+        "it",
     ]
-    
+    var article = ""
     var subjectId = Math.floor(Math.random() * (subject.length));
 
     if (subject[subjectId].charAt(0) == "a"||"e"||"i"||"o"||"u") {
-        var article = " an "
+        article = " an ";
     } else {
-        var article = " a "   
+        article = " a ";   
     }
 
     var opening = [
-        'Once upon a time, there was' + article,
-        'Long, long ago, in a forest far, far away, there was' + article,
-        'Once upon a midnight dreary, there was' + article,    
+        'Once upon a time,',
+        'Long, long ago, in a forest far, far away,',
+        'Once upon a midnight dreary,',
+        "'Twas the night before Christmas, and inside a small house"
     ]
 
     
     var randomNumber = Math.floor(Math.random() * (opening.length));
-    var story = opening[randomNumber]
+    var story = opening[randomNumber] + " there was " + article,
     story = story + subject[subjectId] + '. The ' + subject[subjectId]
 
     var motivation = [
         " was heading to grandma's house",
         " wanted to play with all the other reindeers",
-        " wanted to work for Santa"
+        " wanted to work for Santa",
+        " wanted a red bike for Christmas"
     ]
 
     var randomNumber = Math.floor(Math.random() * (motivation.length));
@@ -64,6 +70,8 @@ function newStory() {
         "there was a big bad wolf.",
         "the reindeers were mean to " + objectivePronoun[subjectId] + ".",
         personalPronoun[subjectId] + " was very ill.",
+        "hunting season was in full swing and " + subject[subjectId] + "s were wanted for people's Christmas dinners.",
+
     ]
 
     var randomNumber = Math.floor(Math.random() * (twist.length));
@@ -89,7 +97,7 @@ function newStory() {
     ]
 
     var randomNumber = Math.floor(Math.random() * (resolution.length));
-    story = story + " and " + resolution[randomNumber]
+    story = story + " and then " + resolution[randomNumber]
 
     document.getElementById('story').innerHTML = story
 }
