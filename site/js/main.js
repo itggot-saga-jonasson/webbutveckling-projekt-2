@@ -34,13 +34,16 @@ function newStory() {
         "him",
         "it",
     ]
-    var article = ""
+    
+    var article = [ " an ", " a "]
     var subjectId = Math.floor(Math.random() * (subject.length));
 
     if (subject[subjectId].charAt(0) == "a"||"e"||"i"||"o"||"u") {
-        article = " an ";
+        console.log("hey it's an");
+        articleNum = 0
     } else {
-        article = " a ";   
+        articleNum = 1 
+        console.log("hey it's a");
     }
 
     var opening = [
@@ -52,7 +55,7 @@ function newStory() {
 
     
     var randomNumber = Math.floor(Math.random() * (opening.length));
-    var story = opening[randomNumber] + " there was " + article,
+    var story = opening[randomNumber] + " there was" + article[articleNum],
     story = story + subject[subjectId] + '. The ' + subject[subjectId]
 
     var motivation = [
