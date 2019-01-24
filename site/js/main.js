@@ -35,15 +35,13 @@ function newStory() {
         "it",
     ]
     
-    var article = [ " an ", " a "]
     var subjectId = Math.floor(Math.random() * (subject.length));
 
-    if (subject[subjectId].charAt(0) == "a"||"e"||"i"||"o"||"u") {
-        console.log("hey it's an");
-        articleNum = 0
+    let vowels = "aeiou"
+    if (vowels.includes(subject[subjectId].charAt(0))) {
+        var article = " an "
     } else {
-        articleNum = 1 
-        console.log("hey it's a");
+        var article = " a "
     }
 
     var opening = [
@@ -55,7 +53,7 @@ function newStory() {
 
     
     var randomNumber = Math.floor(Math.random() * (opening.length));
-    var story = opening[randomNumber] + " there was" + article[articleNum],
+    var story = opening[randomNumber] + " there was" + article,
     story = story + subject[subjectId] + '. The ' + subject[subjectId]
 
     var motivation = [
@@ -83,7 +81,7 @@ function newStory() {
     var action = [
         " traded " + possessivePronoun[subjectId] + " basket of goodies to the devil for safe passage",
         " decided to punch Santa Claus in the face for presents",
-        " developed a glowing nose and led Santa's sleigh",
+        " developed a glowing nose and led Santa's sleigh on Christmas Eve",
         " saw three ghosts on Christmas Eve"
     ]
 
