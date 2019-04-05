@@ -6,6 +6,21 @@ function newStory() {
         "apple",
         "elf",
         "turkey",
+        "gnome",
+        "fox",
+        "orphan"
+    ]
+
+    var pluralSubject = [
+        "little girls",
+        "little boys",
+        "reindeers",
+        "apples",
+        "elves",
+        "turkeys",
+        "gnomes",
+        "foxes",
+        "orphans"
     ]
     
     var personalPronoun = [
@@ -15,6 +30,9 @@ function newStory() {
         "it",
         "he",
         "it",
+        "he",
+        "it",
+        "they"
     ]
     
     var possessivePronoun = [
@@ -24,6 +42,9 @@ function newStory() {
         "its",
         "his",
         "its",
+        "his",
+        "its",
+        "their"
     ]
 
     var objectivePronoun = [
@@ -33,6 +54,9 @@ function newStory() {
         "it",
         "him",
         "it",
+        "him",
+        "it",
+        "them"
     ]
     
     var subjectId = Math.floor(Math.random() * (subject.length));
@@ -48,7 +72,9 @@ function newStory() {
         'Once upon a time,',
         'Long, long ago, in a forest far, far away,',
         'Once upon a midnight dreary,',
-        "'Twas the night before Christmas, and inside a small house"
+        "'Twas the night before Christmas, and inside a small house",
+        "Once,",
+        "Once, in a small kingdom far, far away,"
     ]
 
     
@@ -58,9 +84,13 @@ function newStory() {
 
     var motivation = [
         " was heading to grandma's house",
-        " wanted to play with all the other reindeers",
+        " wanted to play with all the other " + pluralSubject[subjectId],
         " wanted to work for Santa",
-        " wanted a red bike for Christmas"
+        " wanted a red bike for Christmas",
+        " was heading to Mordor",
+        " wanted to eat pizza",
+        " wanted snow for Christmas",
+        " wished to find" + possessivePronoun[subjectId] + "parents"
     ]
 
     var randomNumber = Math.floor(Math.random() * (motivation.length));
@@ -71,8 +101,13 @@ function newStory() {
         "there was a big bad wolf.",
         "the reindeers were mean to " + objectivePronoun[subjectId] + ".",
         personalPronoun[subjectId] + " was very ill.",
-        "hunting season was in full swing and " + subject[subjectId] + "s were wanted for people's Christmas dinners.",
-
+        "hunting season was in full swing and " + pluralSubject[subjectId] + " were wanted for people's Christmas dinners.",
+        personalPronoun[subjectId] + " was on Santa's naughty list.",
+        "a zombie plague ravaged the land.",
+        personalPronoun[subjectId] + " was being taken to Isengard instead.",
+        "a snowstorm kept " + objectivePronoun[subjectId] + " locked inside " + possessivePronoun[subjectId] + " house.",
+        "global warming had melted the icecaps.",
+        possessivePronoun[subjectId] + " friends had been taken to Isengard."
     ]
 
     var randomNumber = Math.floor(Math.random() * (twist.length));
@@ -82,11 +117,16 @@ function newStory() {
         " traded " + possessivePronoun[subjectId] + " basket of goodies to the devil for safe passage",
         " decided to punch Santa Claus in the face for presents",
         " developed a glowing nose and led Santa's sleigh on Christmas Eve",
-        " saw three ghosts on Christmas Eve"
+        " saw three ghosts on Christmas Eve",
+        " worked very hard to become good again",
+        " went to college to study magic",
+        " was saved by the power of friendship",
+        " failed at saving " + possessivePronoun[subjectId] + " friends",
+        " stopped burning fossil fuels"
     ]
 
     var randomNumber = Math.floor(Math.random() * (action.length));
-    story = story + " The " + subject[subjectId] + action[randomNumber]
+    story = story + " In the end, the " + subject[subjectId] + action[randomNumber]
 
     var resolution = [
         "lived happily ever after.",
@@ -94,7 +134,11 @@ function newStory() {
         "went to wonderland.",
         "became the ruler of hell.",
         "took over the North Pole and became the new Santa Claus.",
-        "stole Christmas."
+        "stole Christmas.",
+        "fell into a volcano and died a horrible death.",
+        "defeated the Dark Lord.",
+        personalPronoun[subjectId] + " got kidnapped.",
+        "the earth was saved."
     ]
 
     var randomNumber = Math.floor(Math.random() * (resolution.length));
