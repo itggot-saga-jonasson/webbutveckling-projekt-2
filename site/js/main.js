@@ -90,7 +90,7 @@ function newStory() {
         " was heading to Mordor",
         " wanted to eat pizza",
         " wanted snow for Christmas",
-        " wished to find" + possessivePronoun[subjectId] + "parents"
+        " wished to find " + possessivePronoun[subjectId] + " parents"
     ]
 
     var randomNumber = Math.floor(Math.random() * (motivation.length));
